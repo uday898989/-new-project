@@ -8,17 +8,12 @@
   <name>01-maven-web-app</name>
   <url>http://maven.apache.org</url>
  
- <distributionManagement>
+<distributionManagement>
     <repository>
         <id>central</id>
         <name>jfrog.cloudbinary.io-releases</name>
-        <url>http://54.80.213.136:8081/artifactory/uday</url>
+        <url>http://54.234.63.26:8081/artifactory/libs-release-local</url>
     </repository>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>jfrog.cloudbinary.io-snapshots</name>
-        <url>http://54.80.213.136:8081/artifactory/uday</url>
-    </snapshotRepository>
 </distributionManagement>
   
   <dependencies>
