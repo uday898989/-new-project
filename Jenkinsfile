@@ -28,7 +28,7 @@ pipeline{
              }
          }
 
-         stage('Integration Test maven'){
+        stage('Integration Test maven'){
          
 
              steps{
@@ -39,14 +39,26 @@ pipeline{
              }
          }
          
-         stage('static code analysis: sonarqube'){
+        stage('static code analysis: sonarqube'){
 
             steps{
                script{
 
                    def sonarQubecredentialsId = 'sona-api'
-                   
+
                    statiCodeAnalysis(sonarQubecredentialsId)
+               }
+            }
+       
+         }
+        stage('Quality Gate Status Check : sonarqube'){
+
+            steps{
+               script{
+
+                   def sonarQubecredentialsId = 'sona-api'
+
+                   QualityGateStatus(sonarQubecredentialsId)
                }
             }
        
