@@ -12,7 +12,7 @@ pipeline{
             steps{
             gitCheckout(
                 branch: "main",
-                url: "https://github.com/uday898989/-new-project.git"
+                url: "https://github.com/uday898989/newproject.git"
             )
             }
         }
